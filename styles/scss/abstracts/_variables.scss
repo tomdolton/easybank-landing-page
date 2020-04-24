@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+// Regular font family
+$font-family: 'Public Sans', sans-serif;;
+
+
+
+
+
+// Colors primary
+$clr-primary: hsl(233, 26%, 24%); // Header text
+$clr-green: hsl(136, 65%, 51%);
+$clr-cyan: hsl(192, 70%, 51%);
+$gradient: linear-gradient(to left, $clr-green, $clr-cyan);
+
+// Colors neutral
+$clr-gray-dark: hsl(233, 8%, 62%);  // Sub text 
+$clr-gray-mid: hsl(220, 16%, 96%);
+$clr-gray-light: hsl(0, 0%, 98%);
+$clr-white: hsl(0, 0%, 100%);
+
+
+
+
+
+// Container's maximum width
+// $max-width-medium: 800px;
+$max-width: 1110px;
+
+
+
+
+
+// Breakpoints
+  $bp-small: 320px;
+  $bp-medium: 768px;
+  $bp-large: 1024px;
+

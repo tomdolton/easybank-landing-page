@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Event wrapper
+@mixin on-event {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+
+// Clearfix, use to contain floats, based on micro clearfix by Nicolas Gallagher
+// http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}

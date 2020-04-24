@@ -1,0 +1,8 @@
+
+
+.nav__logo {
+
+  @include on-event {
+    cursor: pointer;
+  }
+}

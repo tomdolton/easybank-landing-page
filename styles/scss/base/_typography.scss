@@ -1,0 +1,21 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-family: $font-family;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+
+}
+
+h1, h2, h3, h4 {
+  color: $clr-primary;
+  font-weight: 300;
+}
+
+
+p {
+  color: $clr-gray-dark;
+}
+

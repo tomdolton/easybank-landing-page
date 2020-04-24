@@ -9,13 +9,26 @@ body {
 
 }
 
+
 h1, h2, h3, h4 {
   color: $clr-primary;
   font-weight: 300;
+  line-height: 1.2;
+}
+
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.22rem
 }
 
 
 p {
   color: $clr-gray-dark;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
 }
-

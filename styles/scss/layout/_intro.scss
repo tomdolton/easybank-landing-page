@@ -1,6 +1,82 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the intro 
+// -----------------------------------------------------------------------------
 
 
+//
+// Intro section
+// ==========================================================================
 
+//  colors and overall layout
 .intro {
-  background: $clr-primary;
+  background: $clr-gray-light;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $bp-medium) {
+    flex-direction: row;
+  }
+}
+
+
+
+//
+// Images sub-section
+// ==========================================================================
+
+//
+// Images section
+// 1. Set background image for section
+// 2. Set responsive flex order in relation to copy section
+//
+.intro__images {
+  background: center / cover no-repeat url("../../images/bg-intro-mobile.svg"); // 1 //
+  width: 100%; // 1 //
+  height: 280px; // 1 //
+
+  order: -1; // 2 //
+  margin-bottom: 3.125rem;
+}
+
+
+
+//
+// Container for mockup images
+// 1. Enables background image to fill to margins, padding alignment is kept
+// 2. Mockup images positioned relative to this
+//
+.intro__images .container {
+  position: relative; // 2 //
+  max-width: 375px; // 1 //
+}
+
+// Phone image mockups positioning
+.intro__mockups {
+  position: absolute; // 2 //
+  top: -115px;
+  left: 0;
+  padding: 0 25px; // 1 //
+}
+
+
+
+//
+// Copy sub-section
+// ==========================================================================
+
+.intro__title {
+  font-size: 2.4rem;
+  margin-bottom: 22.5px;
+}
+
+
+.intro__subtext {
+  margin-bottom: 30px;
+}
+
+
+.intro__btn {
+  margin-bottom: 88px;
 }

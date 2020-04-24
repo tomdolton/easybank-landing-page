@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the articles section
+// -----------------------------------------------------------------------------
+
+//
+// Articles container and main heading
+// ==========================================================================
+
+.articles {
+  background-color: $clr-gray-light;
+
+  padding-top: 5.75rem;
+  padding-bottom: 5.625rem;
+}
+
+
+
+
+.articles__heading {
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+
+
+//
+// Article sub-sections
+// ==========================================================================
+
+// Vertical spacing for mobile view
+.article:nth-last-child(n+2) {
+  margin-bottom: 24px;
+}
+
+
+
+//
+// Article images
+// 1. Resize image to required size
+// 2. Cropps image rather than streching to fit new dimensions
+// 3. Correction to small gap left
+//
+.article__image {
+  height: 200px; // 1 //
+  width: 100%; // 1 //
+  object-fit: cover; // 2 //
+  // max-width: 100%;
+  margin-bottom: -4px; // 3 //
+}
+
+
+
+// Vertical spacing and text sizing
+.article__textbox {
+  background: $clr-white;
+  margin: 0 auto;
+  padding: 30px 30px 42px;
+}
+
+
+.article__author {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+
+.article__title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+
+.article__copy {
+  font-size: 12.5px;
+  line-height: 1.5;
+}

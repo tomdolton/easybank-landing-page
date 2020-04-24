@@ -370,9 +370,9 @@ body {
 }
 
 /**
- * Reset default padding and margin on block elements
- */
-h1, h2, h3, h4, p, ul, li {
+* Reset default padding and margin on block elements
+*/
+h1, h2, h3, h4, p, ul, li, button {
   padding: 0;
   margin: 0;
 }
@@ -410,10 +410,22 @@ body {
 h1, h2, h3, h4 {
   color: #2d314d;
   font-weight: 300;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.22rem;
 }
 
 p {
   color: #9698a6;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
 }
 
 /**
@@ -513,7 +525,192 @@ p {
 }
 
 .intro {
+  background: #fafafa;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.intro__images {
+  background: center/cover no-repeat url("../../images/bg-intro-mobile.svg");
+  width: 100%;
+  height: 280px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-bottom: 3.125rem;
+}
+
+.intro__images .container {
+  position: relative;
+  max-width: 375px;
+}
+
+.intro__mockups {
+  position: absolute;
+  top: -115px;
+  left: 0;
+  padding: 0 25px;
+}
+
+.intro__title {
+  font-size: 2.4rem;
+  margin-bottom: 22.5px;
+}
+
+.intro__subtext {
+  margin-bottom: 30px;
+}
+
+.intro__btn {
+  margin-bottom: 88px;
+}
+
+.details {
+  background-color: #f3f4f6;
+  text-align: center;
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.details__heading {
+  margin-bottom: 3.6rem;
+}
+
+.details__heading h2 {
+  max-width: 250px;
+  margin: 0 auto 1rem;
+}
+
+.details__item > :nth-last-child(n+2) {
+  margin-bottom: 20px;
+}
+
+.details__item:nth-last-child(n+2) {
+  margin-bottom: 35px;
+}
+
+.articles {
+  background-color: #fafafa;
+  padding-top: 5.75rem;
+  padding-bottom: 5.625rem;
+}
+
+.articles__heading {
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.article:nth-last-child(n+2) {
+  margin-bottom: 24px;
+}
+
+.article__image {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: -4px;
+}
+
+.article__textbox {
+  background: white;
+  margin: 0 auto;
+  padding: 30px 30px 42px;
+}
+
+.article__author {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.article__title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.article__copy {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.footer {
   background: #2d314d;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.footer__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+
+.footer__social-icons img {
+  width: 24px;
+}
+
+.footer__social-icons li:nth-last-of-type(n + 2) {
+  margin-right: 15px;
+}
+
+.footer__menu {
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.footer__menu div:nth-last-of-type(n + 2) li {
+  margin-bottom: 20px;
+}
+
+.footer__menu li:nth-last-of-type(n + 2) {
+  margin-bottom: 20px;
+}
+
+.footer__btn {
+  margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .footer .container,
+  .footer__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .btn {
@@ -523,7 +720,7 @@ p {
   font-size: 14.5px;
   border: none;
   border-radius: 50px;
-  padding: 13px 32px;
+  padding: 13px 35px;
 }
 
 .btn:hover, .btn:active, .btn:focus {
@@ -531,7 +728,7 @@ p {
   cursor: pointer;
 }
 
-.nav__logo:hover, .nav__logo:active, .nav__logo:focus {
+.logo img:hover, .logo img:active, .logo img:focus {
   cursor: pointer;
 }
 

@@ -1,3 +1,88 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+// Footer section color and general layout
+.footer {
+  background: $clr-primary;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+
+
+
+//
+// Logo and social links (Column 1)
+// ==========================================================================
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+// Social icons row spacing and sizing
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+
+  & img {
+    width: 24px; // 2 //
+  }
+
+  & li:nth-last-of-type(n + 2) {
+    margin-right: 15px;
+  }
+}
+
+
+
+//
+// Menu (Column 2)
+// ==========================================================================
+
+.footer__menu {
+  color: $clr-white;
+  font-weight: 300;
+  font-size: 14px;
+
+  margin-bottom: 35px;
+
+  // Set spacing of list items (in two seperate divs for responsive break)
+  & div:nth-last-of-type(n + 2) li { margin-bottom: 20px; }
+  & li:nth-last-of-type(n + 2) { margin-bottom: 20px; }
+}
+
+
+
+//
+// Button and copyright (Column 3)
+// ==========================================================================
+
+.footer__btn {
+  margin-bottom: 28px;
+}
+
+
+
+
+
+
+
+//
+// Responsive layout
+// ==========================================================================
+
+@media (min-width: $bp-medium) {
+
+  .footer .container,
+  .footer__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
+
+}

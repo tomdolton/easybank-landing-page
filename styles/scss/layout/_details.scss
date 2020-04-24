@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the details section
+// -----------------------------------------------------------------------------
+
+
+.details {
+  background-color: $clr-gray-mid;
+  text-align: center;
+
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.details__heading {
+  margin-bottom: 3.6rem;
+}
+
+.details__heading h2 {
+  // font-size: 2rem; // currently set in _typography
+  max-width: 250px;
+  margin: 0 auto 1rem;
+}
+
+
+//
+// Item sub-sections
+// ==========================================================================
+
+// Vertical spacing for mobile view
+.details__item >:nth-last-child(n+2) {
+  margin-bottom: 20px;
+}
+
+.details__item:nth-last-child(n+2) {
+  margin-bottom: 35px;
+}
+
+

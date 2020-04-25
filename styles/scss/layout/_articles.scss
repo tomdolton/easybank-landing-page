@@ -9,7 +9,7 @@
 .articles {
   background-color: $clr-gray-light;
 
-  padding-top: 5.9375rem;
+  padding-top: 5.625rem;
   padding-bottom: 5.5rem;
   text-align: center;
 }
@@ -29,11 +29,15 @@
 
 .article {
   background: $clr-white;
-  max-width: 400px;  // TODO: can experiment with this // 
+  max-width: $grid-item-max-width;
 
   margin: 0 auto;
   &:nth-last-child(n+2) {
     margin-bottom: 24px;
+
+    @media (min-width: $bp-medium) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -68,7 +72,7 @@
 
 
 .article__title {
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
@@ -97,6 +101,11 @@
 
   .articles__heading {
     @include grid-heading;
+    margin-bottom: 1.425rem;
+  }
+
+  .article__textbox {
+    padding: 25px 25px 30px;
   }
 
 }

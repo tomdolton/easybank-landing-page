@@ -35,6 +35,7 @@ $max-width: 1110px;
 $max-width-medium: 1110px;
 $max-width-large: 1110px + 50px;
 
+$grid-item-max-width: 330px;
 
 
 
@@ -42,5 +43,5 @@ $max-width-large: 1110px + 50px;
 // Breakpoints
   $bp-small: 320px;
   $bp-medium: 768px;
-  $bp-large: 1024px;
+  $bp-large: 1110px + 50px;
 

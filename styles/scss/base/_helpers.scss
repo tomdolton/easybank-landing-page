@@ -28,6 +28,10 @@
   // @media screen {
   //   max-width: $max-width-medium; /* 1 */
   // }
+
+  @media (min-width: $bp-large) {
+    max-width: $max-width-large;
+  }
  }
 
 /**

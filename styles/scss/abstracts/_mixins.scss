@@ -21,3 +21,15 @@
     clear: both;
   }
 }
+
+// Grid, set grid
+@mixin grid($columns) {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+// Set headings to span entire grid width
+@mixin grid-heading {
+  grid-column: 1 / -1;
+}

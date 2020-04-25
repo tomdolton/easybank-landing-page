@@ -12,12 +12,12 @@
 }
 
 .details__heading {
-  margin-bottom: 3.6rem;
+  max-width: 400px;
+  margin: 0 auto 3.6rem;
 }
 
 .details__heading h2 {
   // font-size: 2rem; // currently set in _typography
-  max-width: 250px;
   margin: 0 auto 1rem;
 }
 
@@ -25,6 +25,11 @@
 //
 // Item sub-sections
 // ==========================================================================
+
+.details__item {
+  max-width: 320px;
+  margin: 0 auto;
+}
 
 // Vertical spacing for mobile view
 .details__item >:nth-last-child(n+2) {
@@ -36,3 +41,38 @@
 }
 
 
+//
+// Media queries
+// ==========================================================================
+
+// Medium screens layout
+@media (min-width: $bp-medium) {
+  
+  .details {
+    padding-top: 6.875rem;
+    padding-bottom: 6.875rem;
+  }
+  
+  .details .container {
+    @include grid(2);
+  }
+  
+  .details__heading {
+    @include grid-heading;
+  }
+}
+
+
+
+// Large screens layout
+@media (min-width: $bp-large) {
+
+  .details .container {
+    @include grid(4);
+    text-align: left;
+  }
+
+  .details__heading {
+    margin-left: 0;
+  }
+}

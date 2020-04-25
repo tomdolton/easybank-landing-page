@@ -9,16 +9,15 @@
 .articles {
   background-color: $clr-gray-light;
 
-  padding-top: 5.75rem;
-  padding-bottom: 5.625rem;
+  padding-top: 5.9375rem;
+  padding-bottom: 5.5rem;
+  text-align: center;
 }
-
 
 
 
 .articles__heading {
   font-size: 1.9rem;
-  text-align: center;
   margin-bottom: 2.2rem;
 }
 
@@ -28,9 +27,14 @@
 // Article sub-sections
 // ==========================================================================
 
-// Vertical spacing for mobile view
-.article:nth-last-child(n+2) {
-  margin-bottom: 24px;
+.article {
+  background: $clr-white;
+  max-width: 400px;  // TODO: can experiment with this // 
+
+  margin: 0 auto;
+  &:nth-last-child(n+2) {
+    margin-bottom: 24px;
+  }
 }
 
 
@@ -44,8 +48,7 @@
 .article__image {
   height: 200px; // 1 //
   width: 100%; // 1 //
-  object-fit: cover; // 2 //
-  // max-width: 100%;
+  object-fit: cover; // 2 //  
   margin-bottom: -4px; // 3 //
 }
 
@@ -53,8 +56,7 @@
 
 // Vertical spacing and text sizing
 .article__textbox {
-  background: $clr-white;
-  margin: 0 auto;
+  text-align: left;
   padding: 30px 30px 42px;
 }
 
@@ -74,4 +76,40 @@
 .article__copy {
   font-size: 12.5px;
   line-height: 1.5;
+}
+
+
+
+//
+// Media queries
+// ==========================================================================
+
+// Medium screens
+@media (min-width: $bp-medium) {
+
+  .articles {
+    padding-bottom: 5rem;
+  }
+
+  .articles .container {
+    @include grid(2);
+  }
+
+  .articles__heading {
+    @include grid-heading;
+  }
+
+}
+
+
+// Large screens
+@media (min-width: $bp-large) {
+
+  .articles .container {
+    @include grid(4);
+  }
+
+  .articles__heading {
+    margin-right: auto;
+  }
 }

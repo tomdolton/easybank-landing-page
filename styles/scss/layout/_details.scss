@@ -69,6 +69,7 @@
 
   .details__heading {
     @include grid-heading;
+    max-width: 620px;
   }
 }
 
@@ -86,5 +87,9 @@
   
   .details__heading {
     margin-left: 0;
+  }
+
+  .item__copy {
+    font-size: 0.95rem;
   }
 }

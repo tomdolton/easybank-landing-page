@@ -43,7 +43,11 @@
 
     // Large screens
     @media (min-width: $bp-large) {
-      background-position: 610px -262px; // 1 //
+      background-position: 610px -256px; // 1 //
+    }
+    // X Large screens
+    @media (min-width: $bp-xlarge) {
+      background-position: 750px -256px; // 1 //
     }
   }
 }
@@ -135,7 +139,7 @@
 //
 .intro__copy {
   z-index: 2; // 1 //
-  max-width: 350px;
+  max-width: 430px;
   margin-left: auto;
   margin-right: auto;
 
@@ -151,7 +155,13 @@
 // Copy internal elements positioning
 .intro__title {
   font-size: 2.4rem;
+  max-width: 400px;
   margin-bottom: 22.5px;
+  
+  @media (min-width: $bp-large) {
+    max-width: 430px;
+    font-size: 3.4rem;
+  }
 }
 
 

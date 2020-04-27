@@ -25,7 +25,7 @@ h2 {
 
 
 h3 {
-  font-size: 1.22rem
+  font-size: 1.22rem;
 }
 
 
@@ -35,4 +35,18 @@ p {
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.7;
+}
+
+
+// Font size increase on large screens
+@media (min-width: $bp-large) {
+
+  h2 { font-size: 2.5rem; }
+
+  h3 { font-size: 1.46rem; }
+
+  p { 
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
 }

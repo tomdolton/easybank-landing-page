@@ -2,33 +2,39 @@
 // This file contains all styles related to the nav of the site/application.
 // -----------------------------------------------------------------------------
 // Nav section basic styling and layout
+// 1. Sit on top of bodal background
 .nav { 
   background: $clr-white;
 
+  z-index: 5; // 1 //
+  position: relative; // 1 //
+
   padding-top: 20px;
   padding-bottom: 21px;
-
-
-  z-index: 5; /* Sit on top of modal */
-  position: relative; /* Sit on top of modal */
-
 }
+
 
 
 // Hides button on small screens
 .nav__btn {
   display: none;
 
+
+
   @media (min-width: $bp-medium) {
     display: block;
   }
 }
+
+
 
 @media (min-width: $bp-medium){
 
   .nav {
     padding: 0;
   }
+
+
 
   .nav .container {
     display: flex;

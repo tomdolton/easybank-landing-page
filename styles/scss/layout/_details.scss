@@ -2,7 +2,7 @@
 // This file contains all styles related to the details section
 // -----------------------------------------------------------------------------
 
-
+// Details dection base styles
 .details {
   background-color: $clr-gray-mid;
   text-align: center;
@@ -11,15 +11,19 @@
   padding-bottom: 4.25rem;
 }
 
+
+
 .details__heading {
   max-width: 400px;
   margin: 0 auto 3.6rem;
 }
 
+
+
 .details__heading h2 {
-  // font-size: 2rem; // currently set in _typography
   margin: 0 auto 1rem;
 }
+
 
 
 //
@@ -31,14 +35,16 @@
   margin: 0 auto;
 }
 
+
+
 // Vertical spacing for mobile view
 .details__item >:nth-last-child(n+2) {
   margin-bottom: 20px;
 }
-
 .details__item:nth-last-child(n+2) {
   margin-bottom: 35px;
 }
+
 
 
 //
@@ -53,10 +59,14 @@
     padding-bottom: 6.875rem;
   }
   
+
+
   .details .container {
     @include grid(2);
   }
   
+
+
   .details__heading {
     @include grid-heading;
   }
@@ -72,6 +82,8 @@
     text-align: left;
   }
 
+
+  
   .details__heading {
     margin-left: 0;
   }

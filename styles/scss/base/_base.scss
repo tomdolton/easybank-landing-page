@@ -10,6 +10,7 @@ html {
 }
 
 
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -23,14 +24,16 @@ html {
 }
 
 
+
 /**
  * Default styles
- * 1. Stops absolutel postioned elements creating side scroll
+ * 1. Stops absolute postioned elements creating side scroll
  */
 body {
   background: $clr-white;
-  overflow-x: hidden;
+  overflow-x: hidden; // 1 //
 }
+
 
 
 /**
@@ -42,6 +45,7 @@ h1, h2, h3, h4, p, ul, li, button {
 }
 
 
+
 /**
  * Make images responsive
  * 1. Image will never scale up larger than its original size
@@ -49,14 +53,15 @@ h1, h2, h3, h4, p, ul, li, button {
 img {
   max-width: 100%; /* 1 */
   height: auto;
-
 }
+
 
 
 /* Basic styles for links */
 a {
   text-decoration: none;
 }
+
 
 
 /* Basic styles for list items */

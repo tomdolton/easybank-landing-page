@@ -12,7 +12,7 @@
   position: relative; // 3 //
   background-color: $clr-gray-light;
  
- 
+
 // Two color background image as psuedo element
 // 1. Set background image & dimensions
 // 2. Absolutely positioned ot enable overflow of sections
@@ -68,7 +68,6 @@
 // Images sub-section
 // ==========================================================================
 
-
 //
 // Container for mockup images
 // 1. Centered within .container
@@ -108,10 +107,14 @@
   z-index: 2; // 1 //
   min-width: 104%;;
 
+
+
   @media (min-width: $bp-medium) {
     top: -250px;
     left: 80px;
   }
+
+
 
   @media (min-width: $bp-large) {
     top: -315px;
@@ -150,6 +153,8 @@
   font-size: 2.4rem;
   margin-bottom: 22.5px;
 }
+
+
 
 .intro__subtext { margin-bottom: 30px; }
 .intro__btn { margin-bottom: 88px; }

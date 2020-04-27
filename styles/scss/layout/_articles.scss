@@ -65,16 +65,24 @@
 }
 
 
+
 .article__author {
   font-size: 10px;
   margin-bottom: 10px;
 }
 
 
+
 .article__title {
   font-size: 16px;
   margin-bottom: 10px;
+
+  @include on-event {
+    cursor: pointer;
+    color: $clr-green;
+  }
 }
+
 
 
 .article__copy {
@@ -95,20 +103,26 @@
     padding-bottom: 5rem;
   }
 
+
+
   .articles .container {
     @include grid(2);
   }
+
+
 
   .articles__heading {
     @include grid-heading;
     margin-bottom: 1.425rem;
   }
 
+
+
   .article__textbox {
     padding: 25px 25px 30px;
   }
-
 }
+
 
 
 // Large screens
@@ -117,6 +131,8 @@
   .articles .container {
     @include grid(4);
   }
+
+
 
   .articles__heading {
     margin-right: auto;

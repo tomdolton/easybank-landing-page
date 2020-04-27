@@ -1,3 +1,6 @@
+/*
+   Grid
+   ========================================================================== */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -363,10 +366,12 @@ html {
 }
 
 /**
- * Default body background
+ * Default styles
+ * 1. Stops absolutel postioned elements creating side scroll
  */
 body {
   background: white;
+  overflow-x: hidden;
 }
 
 /**
@@ -444,23 +449,26 @@ p {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1110px;
+  max-width: 1170px;
   /* 1 */
   margin-left: auto;
   /* 2 */
   margin-right: auto;
   /* 2 */
-  padding-left: 25px;
+  padding-left: 24px;
   /* 3 */
-  padding-right: 25px;
+  padding-right: 24px;
   /* 3 */
   width: 100%;
   /* 1 */
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 1160px;
+    padding-left: 30px;
+    /* 3 */
+    padding-right: 30px;
+    /* 3 */
   }
 }
 
@@ -531,8 +539,40 @@ p {
 }
 
 .intro {
-  background: #fafafa;
   text-align: center;
+  position: relative;
+  background-color: #fafafa;
+}
+
+.intro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: center/cover no-repeat url("../../images/bg-intro-mobile.svg");
+  background-color: #fafafa;
+  width: 100%;
+  height: 280px;
+}
+
+@media (min-width: 768px) {
+  .intro::after {
+    background: no-repeat url("../../images/bg-intro-desktop.svg");
+    background-size: 88.4%;
+    background-position: 340px -210px;
+    background-color: #fafafa;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1160px) {
+  .intro::after {
+    background-position: 610px -262px;
+  }
+}
+
+.intro .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,7 +583,7 @@ p {
 }
 
 @media (min-width: 768px) {
-  .intro {
+  .intro .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -556,65 +596,66 @@ p {
 }
 
 .intro__images {
-  background: center/cover no-repeat url("../../images/bg-intro-mobile.svg");
-  width: 100%;
+  position: relative;
   height: 280px;
+  max-width: 325px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  margin-bottom: 35px;
 }
 
 @media (min-width: 768px) {
   .intro__images {
-    background-image: url("../../images/bg-intro-desktop.svg");
-    background-position: -70px -270px;
-    background-size: 1271px;
-    height: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     -ms-flex-preferred-size: 51.5%;
         flex-basis: 51.5%;
-    margin-bottom: 0;
-  }
-}
-
-.intro__images .container {
-  position: relative;
-  max-width: 375px;
-}
-
-@media (min-width: 768px) {
-  .intro__images .container {
     max-width: 100%;
+    margin-bottom: 0;
   }
 }
 
 .intro__mockups {
   position: absolute;
-  top: -115px;
-  left: 0;
-  padding: 0 25px;
+  top: -121px;
+  left: -8px;
+  z-index: 2;
+  min-width: 104%;
 }
 
 @media (min-width: 768px) {
   .intro__mockups {
-    max-width: 110%;
-    top: -125px;
+    top: -250px;
     left: 80px;
   }
 }
 
-.intro__copy.container {
-  max-width: 400px;
+@media (min-width: 1160px) {
+  .intro__mockups {
+    top: -315px;
+    left: 165px;
+    min-width: 135.5%;
+  }
+}
+
+.intro__copy {
+  z-index: 2;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .intro__copy.container {
+  .intro__copy {
     text-align: left;
     -ms-flex-preferred-size: 48.5%;
         flex-basis: 48.5%;
+    margin: 0;
   }
 }
 
@@ -826,10 +867,13 @@ p {
 }
 
 .footer__menu {
-  color: white;
   font-weight: 300;
   font-size: 14px;
   margin-bottom: 35px;
+}
+
+.footer__menu a {
+  color: white;
 }
 
 .footer__menu div:nth-last-of-type(n + 2) li {
@@ -842,7 +886,6 @@ p {
 
 @media (min-width: 768px) {
   .footer__menu {
-    text-align: left;
     margin-bottom: 0;
   }
   .footer__menu div:nth-last-of-type(n + 2) li:last-child {
@@ -850,8 +893,26 @@ p {
   }
 }
 
+@media (min-width: 1160px) {
+  .footer__menu {
+    text-align: left;
+  }
+}
+
 .footer__btn {
   margin-bottom: 28px;
+}
+
+.attribution {
+  background-color: #2d314d;
+  color: #9698a6;
+  font-size: 11px;
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.attribution a {
+  color: #f3f4f6;
 }
 
 @media (min-width: 768px) {

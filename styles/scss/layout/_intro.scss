@@ -1,17 +1,57 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the intro 
+// This file contains all styles related to the intro section
 // -----------------------------------------------------------------------------
-
 
 //
 // Intro section
 // ==========================================================================
 
-//  Section colors and overall layout
+//  Section base styles
 .intro {
-  background: $clr-gray-light;
   text-align: center;
+  position: relative; // 3 //
+  background-color: $clr-gray-light;
+ 
+ 
+// Two color background image as psuedo element
+// 1. Set background image & dimensions
+// 2. Absolutely positioned ot enable overflow of sections
+// 3. Dimensions of absolute section
+// 4. Set responsive flex order in relation to copy section
+  &::after {
+    content: ""; 
+    display: block;
 
+    position: absolute; // 3 //
+    top: 0; // 3 //
+    z-index: 1;
+
+    // Mobile screens
+    background: center / cover no-repeat url("../../images/bg-intro-mobile.svg"); // 1 //
+    background-color: $clr-gray-light;
+    width: 100%; // 2 //
+    height: 280px; // 2 //
+
+    // Medium screens
+    @media (min-width: $bp-medium) {
+      background: no-repeat url("../../images/bg-intro-desktop.svg"); // 1 //
+      background-size: 88.4%; // 1 //
+      background-position: 340px -210px; // 1 //
+      background-color: $clr-gray-light;
+      height: 100%; // 2 //
+    }
+
+    // Large screens
+    @media (min-width: $bp-large) {
+      background-position: 610px -262px; // 1 //
+    }
+  }
+}
+
+
+
+// Layout for intro section
+.intro .container {
   display: flex;
   flex-direction: column;
 
@@ -28,62 +68,55 @@
 // Images sub-section
 // ==========================================================================
 
+
 //
-// Images section
-// 1. Set background image for section
-// 2. Set responsive flex order in relation to copy section
-// 3. Set proportion of parent container this takes up on medium+ screens
+// Container for mockup images
+// 1. Centered within .container
+// 2. Height matches background images for mobile view
+// 3. Mockup images positioned relative to this
+// 4. Flex order with .intro__copy changes on on medium+ screens
+// 5. Set proportion of parent container this takes up on medium+ screens
 //
 .intro__images {
-  background: center / cover no-repeat url("../../images/bg-intro-mobile.svg"); // 1 //
+  position: relative; // 3 //
+  
+  height: 280px; // 2 //
+  max-width: 325px; // 1 //
   width: 100%; // 1 //
-  height: 280px; // 1 //
-
-  order: -1; // 2 //
+  margin-left: auto; // 1 //
+  margin-right: auto; // 1 //
   margin-bottom: 35px;
+  
+  order: -1; // 4 //
 
   @media (min-width: $bp-medium) {
-    background-image: url("../../images/bg-intro-desktop.svg"); // 1 //
-    background-position: -70px -270px;
-    background-size: 1271px;
-    height: 100%; // 1 //
-
-    order: 1; // 2 //
-    flex-basis: 51.5%; // 3 //
-
+    order: 1; // 4 //
+    flex-basis: 51.5%; // 5 //
+    max-width: 100%;
     margin-bottom: 0;
   }
 }
 
 
 
-//
-// Container for mockup images
-// 1. Enables background image to fill to margins, padding alignment is kept
-// 2. Mockup images positioned relative to this
-//
-.intro__images .container {
-  position: relative; // 2 //
-  max-width: 375px; // 1 //
-
-  @media (min-width: $bp-medium) {
-    max-width: 100%;
-  }
-}
-
-
-
 // Phone image mockups positioning
+// 1. Z-index in relation to section background image
 .intro__mockups {
-  position: absolute; // 2 //
-  top: -115px;
-  left: 0;
-  padding: 0 25px; // 1 //
+  position: absolute;
+  top: -121px;
+  left: -8px;
+  z-index: 2; // 1 //
+  min-width: 104%;;
 
   @media (min-width: $bp-medium) {
-    max-width: 110%;
-    top: -125px;
+    top: -250px;
     left: 80px;
+  }
+
+  @media (min-width: $bp-large) {
+    top: -315px;
+    left: 165px;
+    min-width: 135.5%;
   }
 }
 
@@ -94,24 +127,30 @@
 // ==========================================================================
 
 // Section positioning for medium+ screens
-// 3. Set proportion of parent container this takes up on medium+ screens
+// 1. Z-index in relation to section background image
+// 2. Set proportion of parent container this takes up on medium+ screens
 //
-.intro__copy.container {
-  max-width: 400px;
+.intro__copy {
+  z-index: 2; // 1 //
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $bp-medium) {
     text-align: left;
     flex-basis: 48.5%; // 3 //
+    margin: 0;
   }
 }
 
 
-// Internal element positioning
+
+// Copy internal elements positioning
 .intro__title {
   font-size: 2.4rem;
   margin-bottom: 22.5px;
 }
 
 .intro__subtext { margin-bottom: 30px; }
-
 .intro__btn { margin-bottom: 88px; }
+

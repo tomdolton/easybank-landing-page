@@ -13,17 +13,6 @@
 
   <title>Easybank landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -55,27 +44,30 @@
 
 
   <section class="intro">
+    <!-- Set background image to intro -->
+
+    <div class="container">
+      <!-- use container for layout margins -->
 
 
-
-    <div class="intro__copy container">
-      <h1 class="intro__title">
-        Next generation digital banking
-      </h1>
-      <p class="intro__subtext">
-        Take your financial life online. Your Easybank account will be a one-stop-shop
-        for spending, saving, budgeting, investing, and much more.
-      </p>
-      <button class="btn intro__btn">Request Invite</button>
-    </div>
-
-    <div class="intro__images">
-      <div class="container">
-        <img src="images/image-mockups.png" alt="" class="intro__mockups">
+      <div class="intro__copy">
+        <h1 class="intro__title">
+          Next generation digital banking
+        </h1>
+        <p class="intro__subtext">
+          Take your financial life online. Your Easybank account will be a one-stop-shop
+          for spending, saving, budgeting, investing, and much more.
+        </p>
+        <button class="btn intro__btn">Request Invite</button>
       </div>
+
+      <div class="intro__images">
+        <!-- <div class="container"> -->
+        <img src="images/image-mockups.png" alt="Phones with Easy Bank app displayed" class="intro__mockups">
+        <!-- </div> -->
+      </div>
+
     </div>
-
-
 
   </section>
   <!-- intro end -->
@@ -204,24 +196,24 @@
           <img src="images/logo-white.svg" alt="">
         </a>
         <ul class="footer__social-icons">
-          <li><img src="images/icon-facebook.svg" alt="Facebook"></li>
-          <li><img src="images/icon-youtube.svg" alt="Youtube"></li>
-          <li><img src="images/icon-twitter.svg" alt="Twitter"></li>
-          <li><img src="images/icon-pinterest.svg" alt="Pinterest"></li>
-          <li><img src="images/icon-instagram.svg" alt="Instagram"></li>
+          <li><a href=""><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+          <li><a href=""><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+          <li><a href=""><img src="images/icon-youtube.svg" alt="Youtube"></a></li>
+          <li><a href=""><img src="images/icon-pinterest.svg" alt="Pinterest"></a></li>
+          <li><a href=""><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
         </ul>
       </div>
 
       <ul class="footer__menu">
         <div>
-          <li>About Us</li>
-          <li>Contact</li>
-          <li>Blog</li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Blog</a></li>
         </div>
         <div>
-          <li>Careers</li>
-          <li>Support</li>
-          <li>Privacy Policy</li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Support</a></li>
+          <li><a href="">Privacy Policy</a></li>
         </div>
       </ul>
 
@@ -236,10 +228,10 @@
   <!-- footer end -->
 
 
-  <!-- <div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    Coded by <a href="#">Tom Dolton</a>.
+  </div>
 
   <script src="scripts/main.js"></script>
 </body>

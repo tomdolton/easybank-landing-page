@@ -52,7 +52,7 @@
 // ==========================================================================
 
 .footer__menu {
-  color: $clr-white;
+  & a { color: $clr-white; }
   font-weight: 300;
   font-size: 14px;
 
@@ -66,14 +66,15 @@
   & li:nth-last-of-type(n + 2) { margin-bottom: 20px; } // 2 //
 
   @media (min-width: $bp-medium) {
-    text-align: left;
     margin-bottom: 0;
     
     // 3. Remove bottom margin in first div for medium+ view
     & div:nth-last-of-type(n + 2) li:last-child { margin-bottom: 0; } // 3 //
   }
-
   
+  @media (min-width: $bp-large) {
+    text-align: left;
+  }
 }
 
 
@@ -88,7 +89,22 @@
 
 
 
+//
+// Attribution section
+// ==========================================================================
 
+.attribution {
+  background-color: $clr-primary;
+  color: $clr-gray-dark;
+  font-size: 11px;
+  text-align: center;
+
+  padding: 2rem 0 1rem;
+}
+
+.attribution a {
+  color: $clr-gray-mid;
+}
 
 
 

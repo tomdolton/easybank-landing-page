@@ -24,10 +24,12 @@ html {
 
 
 /**
- * Default body background
+ * Default styles
+ * 1. Stops absolutel postioned elements creating side scroll
  */
 body {
   background: $clr-white;
+  overflow-x: hidden;
 }
 
 
